@@ -1,0 +1,17 @@
+﻿@page "/food"
+@using BlazorApp.Data
+
+
+<h3>Food</h3>
+
+<div>
+    @foreach (var food in _foodService.GetFoods())
+    {
+        <div>@food.Nmae</div>
+        <div>@food.Price</div>
+    }
+</div>
+
+@code {
+    FoodService _foodService = new FoodService();
+}
