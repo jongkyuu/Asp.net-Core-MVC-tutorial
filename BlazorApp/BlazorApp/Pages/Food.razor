@@ -3,6 +3,9 @@
 
 @inject IFoodService foodService;
 @inject PaymentService paymentService;
+@inject SingletonService singletonService;
+@inject TransientService transientService;
+@inject ScopedService scopedService;
 
 <h3>Food</h3>
 
@@ -18,6 +21,15 @@
 
 <div>
     <h3>가격 합 : @paymentService.Calculate()</h3>
+</div>
+
+<div>
+    <h1>Singleton</h1>
+    Guid : @singletonService.ID
+    <h1>Transient</h1>
+    Guid : @transientService.ID
+    <h1>Scoped</h1>
+    Guid : @scopedService.ID
 </div>
 
 @code {

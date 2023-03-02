@@ -17,6 +17,12 @@ namespace BlazorApp
             builder.Services.AddSingleton<IFoodService, FastFoodService>();
             builder.Services.AddSingleton<PaymentService>();
 
+            // 3가지 모드
+            builder.Services.AddSingleton<SingletonService>(); // 서버가 뜰때 한번 만들어짐. 변동이 없고 모두에게 똑같은 정보를 보여줘야 할때 사용(전역)
+            builder.Services.AddTransient<TransientService>(); // 요청 할때마다 계속 
+            builder.Services.AddScoped<ScopedService>();
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

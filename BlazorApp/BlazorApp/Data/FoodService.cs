@@ -53,4 +53,49 @@
             return foodsPrice.Sum();
         }
     }
+
+    public class SingletonService : IDisposable
+    {
+        public Guid ID { get; set; }
+
+        public SingletonService()
+        {
+            ID = Guid.NewGuid();
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Singleton Service Disposed");
+        }
+    }
+
+    public class TransientService : IDisposable
+    {
+        public Guid ID { get; set; }
+
+        public TransientService()
+        {
+            ID = Guid.NewGuid();
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Singleton Service Disposed");
+        }
+    }
+
+    public class ScopedService : IDisposable
+    {
+        public Guid ID { get; set; }
+
+        public ScopedService()
+        {
+            ID = Guid.NewGuid();
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Singleton Service Disposed");
+        }
+    }
 }
