@@ -14,6 +14,8 @@ namespace BlazorApp
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
+            builder.Services.AddSingleton<IFoodService, FastFoodService>();
+            builder.Services.AddSingleton<PaymentService>();
 
             var app = builder.Build();
 

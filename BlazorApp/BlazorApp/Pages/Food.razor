@@ -1,17 +1,29 @@
 ﻿@page "/food"
 @using BlazorApp.Data
 
+@inject IFoodService foodService;
+@inject PaymentService paymentService;
 
 <h3>Food</h3>
 
 <div>
-    @foreach (var food in _foodService.GetFoods())
+    @foreach (var food in foodService.GetFoods())
     {
         <div>@food.Nmae</div>
         <div>@food.Price</div>
     }
 </div>
 
+<br/>
+
+<div>
+    <h3>가격 합 : @paymentService.Calculate()</h3>
+</div>
+
 @code {
-    FoodService _foodService = new FoodService();
+    //IFoodService _foodService = new FastFoodService();
+    protected override void OnInitialized()
+    {
+        
+    }
 }
