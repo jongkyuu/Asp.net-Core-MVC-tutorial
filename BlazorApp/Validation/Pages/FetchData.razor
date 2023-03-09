@@ -36,7 +36,7 @@ else
         </tbody>
     </table>
 
-    <button class="btn btn-primary" onclick="AddNewForecast">
+    <button class="btn btn-primary" @onclick="AddNewForecast">
         Add New Forecast
     </button>
 
@@ -47,13 +47,17 @@ else
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title">Add Forecast</h3>
-                        <button type="button" class="btn-close" @onclick="ClosePopup">
-                            <span area-hidden="true">X</span>
+                        <button type="button" class="btn btn-close" @onclick="ClosePopup">
+                            @*<span area-hidden="true">X</span>*@
                         </button>
                     </div>
                     <div class="modal-body">
                         <label for="TemperatureC">TemperatureC</label>
-                        <input class="form-control" type="text" placeholder="TemperatureC" />
+                        <input class="form-control" type="text" placeholder="TemperatureC" @bind="_addForecast.TemperatureC"/>
+                        <label for="Summary">Summary</label>
+                        <input class="form-control" type="text" placeholder="Summary" @bind="_addForecast.Summary" />
+                        <br/>
+                        <button class="btn btn-primary" @onclick="SaveForecast">Save</button>
                     </div>
                 </div>
             </div>
@@ -80,6 +84,7 @@ else
     private void SaveForecast()
     {
         _forecasts.Add(_addForecast);
+        _addForecast.Date = DateOnly.FromDateTime(DateTime.Now);
         _showPopup = false;
     }
 
