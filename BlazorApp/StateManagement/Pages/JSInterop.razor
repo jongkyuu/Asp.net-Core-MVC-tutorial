@@ -1,0 +1,17 @@
+﻿@page "/JSInterop"
+@inject IJSRuntime JsRuntime;
+
+<h3>JSInterop</h3>
+
+<div>
+    <button type="button" class="btn-primary" @onclick="HelloWorld">
+        HelloWorld
+    </button>
+</div>
+@code {
+
+    void HelloWorld()
+    {
+        JsRuntime.InvokeAsync<>()
+    }
+}
