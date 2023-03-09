@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{8C6F97ED-BCC7-42D1-83A6-5BA7C6AA8344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{A1AF77FD-A016-420B-A596-633B0491B612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Validation", "Validation\Validation.csproj", "{A1AF77FD-A016-420B-A596-633B0491B612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement", "StateManagement\StateManagement.csproj", "{74788C6A-FA4C-495E-8C5B-80559131FCF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A1AF77FD-A016-420B-A596-633B0491B612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1AF77FD-A016-420B-A596-633B0491B612}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1AF77FD-A016-420B-A596-633B0491B612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74788C6A-FA4C-495E-8C5B-80559131FCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74788C6A-FA4C-495E-8C5B-80559131FCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74788C6A-FA4C-495E-8C5B-80559131FCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74788C6A-FA4C-495E-8C5B-80559131FCF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
