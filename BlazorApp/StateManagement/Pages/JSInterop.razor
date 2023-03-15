@@ -7,11 +7,29 @@
     <button type="button" class="btn-primary" @onclick="HelloWorld">
         HelloWorld
     </button>
+    
+    
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" @onclick="InputName">
+        Input Name
+    </button>
+
+    <p>@_name</p>
 </div>
 @code {
+    string _name = string.Empty;
 
-    void HelloWorld()
+    public async void HelloWorld()
     {
-        JsRuntime.InvokeAsync<>()
+        await JsRuntime.InvokeVoidAsync("testFunction.helloWorld", null);
+    }
+
+    public async void InputName()
+    {
+        _name = await JsRuntime.InvokeAsync<string>("testFunction.inputName", "Input Your Name");
+        
+        StateHasChanged();
     }
 }
